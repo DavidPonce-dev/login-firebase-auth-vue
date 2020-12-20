@@ -1,11 +1,25 @@
 <template>
   <nav>
-    <router-link to="/">Inicio</router-link> | 
-    <router-link to="/login">Iniciar sesion</router-link> | 
-    <router-link to="/register">Registrar</router-link>
   </nav>
-  <router-view/>
+  <nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Login <FirebaseLogo /> <VueLogo /></a>
+    <router-link to="/">Inicio</router-link> |
+    <router-link to="/login">Iniciar sesion</router-link> |
+    <router-link to="/register">Registrar</router-link>
+</nav>
+  <router-view />
 </template>
+
+<script>
+import FirebaseLogo from './components/SVGlogos/FirebaseLogo'
+import VueLogo from './components/SVGlogos/VueLogo'
+export default {
+  components:{
+    FirebaseLogo,
+    VueLogo
+  }
+};
+</script>
 
 <style>
 #app {
@@ -16,13 +30,9 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
 }
 
 nav a.router-link-exact-active {

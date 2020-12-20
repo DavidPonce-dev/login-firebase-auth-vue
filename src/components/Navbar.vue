@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" v-if="!user.loggedIn">userAuth<FirebaseLogo /><VueLogo /></a>
-    <a class="navbar-brand" v-else>Bienvenido {{user.data.displayName}}<FirebaseLogo /><VueLogo /></a>
+    <p class="navbar-brand" v-if="!user.loggedIn">userAuth<FirebaseLogo /><VueLogo /></p>
+    <p class="navbar-brand" v-else>Bienvenido {{user.data.displayName}}<FirebaseLogo /><VueLogo /></p>
     <div class="left">
       <router-link class="home" to="/">Inicio</router-link>
     </div>
@@ -48,11 +48,15 @@ export default {
 </script>
 
 <style scoped>
-nav a {
+a {
   color: #fff;
+  padding: 5px 10px;
 }
-nav > div > a.router-link-exact-active {
+a.router-link-exact-active {
   color: #42b983;
+}
+p{
+  margin:0;
 }
 .right {
   margin-left: auto;

@@ -16,7 +16,7 @@
 </template>
 <style scoped>
   svg {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
   }
 </style>

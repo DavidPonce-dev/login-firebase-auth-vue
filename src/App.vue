@@ -1,41 +1,46 @@
 <template>
-  <nav>
-  </nav>
   <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Login <FirebaseLogo /> <VueLogo /></a>
-    <router-link to="/">Inicio</router-link> |
-    <router-link to="/login">Iniciar sesion</router-link> |
-    <router-link to="/register">Registrar</router-link>
-</nav>
+    <a class="navbar-brand">Login <FirebaseLogo /><VueLogo /></a>
+    <div class="left">
+      <router-link class="home" to="/">Inicio</router-link>
+    </div>
+
+    <div class="right">
+      <router-link to="/login">Iniciar sesion</router-link>
+      <router-link to="/register">Registrar</router-link>
+    </div>
+  </nav>
   <router-view />
 </template>
 
 <script>
-import FirebaseLogo from './components/SVGlogos/FirebaseLogo'
-import VueLogo from './components/SVGlogos/VueLogo'
+import FirebaseLogo from "./components/SVGlogos/FirebaseLogo";
+import VueLogo from "./components/SVGlogos/VueLogo";
 export default {
-  components:{
+  components: {
     FirebaseLogo,
-    VueLogo
-  }
+    VueLogo,
+  },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
+<style scoped>
 nav a {
-  font-weight: bold;
   color: #fff;
 }
-
-nav a.router-link-exact-active {
+nav > div > a.router-link-exact-active {
   color: #42b983;
+}
+.right {
+  margin-left: auto;
+}
+.right a{
+  margin-left: 15px;
+}
+.left {
+  margin-right: auto;
+}
+.left a{
+  margin-right: 15px;
 }
 </style>

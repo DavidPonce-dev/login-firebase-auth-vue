@@ -6,23 +6,7 @@
         :img="require('../assets/vue-firebase.png')"
         titulo= "Login vue"
         class="col-6-sm"
-        texto= 'Este es un sistema de login basado en vue con firebase como backend. \\n aqui puedes iniciar sesion'
-        link= "/login"
-        linkText="IniciarSesion"
-      />
-        <Card
-        :img="require('../assets/vue-firebase.png')"
-        titulo= "Login vue"
-        class="col-6-sm"
-        texto= 'Este es un sistema de login basado en vue con firebase como backend. \n aqui puedes iniciar sesion'
-        link= "/login"
-        linkText="IniciarSesion"
-      />
-        <Card
-        :img="require('../assets/vue-firebase.png')"
-        titulo= "Login vue"
-        class="col-6-md"
-        texto= 'Este es un sistema de login basado en vue con firebase como backend. \n aqui puedes iniciar sesion'
+        :texto= "'Este es un sistema de login basado en vue con firebase como backend. Aquí puedes iniciar sesion'"
         link= "/login"
         linkText="IniciarSesion"
       />

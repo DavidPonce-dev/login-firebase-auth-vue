@@ -28,9 +28,9 @@ export default {
       default:''
     },
     img:{
-      type:Image,
+      type: String,
       required:false,
-      default:null
+      default:''
     },
     link:{
       type:String,

@@ -20,7 +20,10 @@
 
 <script>
 import { mapGetters } from "vuex";
-import firebase from 'firebase'
+
+import firebase from 'firebase/app'
+import 'firebase/auth'
+
 import FirebaseLogo from "./SVGlogos/FirebaseLogo";
 import VueLogo from "./SVGlogos/VueLogo";
 export default {

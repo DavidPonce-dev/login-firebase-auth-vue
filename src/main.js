@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import Firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -16,9 +17,9 @@ const firebaseConfig = {
     appId: "1:619316183352:web:1aefe8d7583b14cbd401cd"
   };
 
-const firebaseApp = Firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-Firebase.auth().onAuthStateChanged(user => {
+firebase.auth().onAuthStateChanged(user => {
   store.dispatch("fetchUser", user);
 });
 
